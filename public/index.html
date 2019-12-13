@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Gothamist News Scraper</title>
+    <title>NPR News Scraper</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
@@ -15,32 +15,14 @@
 <body>
     <nav class="navbar ">
         <div class="navbar-brand">
-            <svg class="gothamist-logo-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 119 27">
-                <title>Gothamist</title>
-                <g class="gothamist-buildings">
-                    <g class="building">
-                        <polygon points="0.01 21.13 4.62 21.13 4.62 9.04 0.01 9.04 0.01 21.13"></polygon>
-                    </g>
-                    <g class="building">
-                        <polygon points="6.82 13 9.66 13 9.66 11.11 6.82 11.11 6.82 13"></polygon>
-                        <polygon points="5.68 19.23 10.52 19.23 10.52 12.46 5.68 12.46 5.68 19.23"></polygon>
-                        <polygon points="5.4 21.13 10.8 21.13 10.8 18.96 5.4 18.96 5.4 20.86"></polygon>
-                    </g>
-                    <g class="building">
-                        <polygon points="11.57 21.13 17.81 21.13 17.81 6.66 11.57 6.66 11.57 21.13"></polygon>
-                        <polygon points="12.22 7.31 17.34 7.31 17.34 5.42 12.22 5.42 12.22 7.31"></polygon>
-                        <polygon points="13.64 6.23 15.35 6.23 15.35 4.88 13.64 4.88 13.64 6.23"></polygon>
-                        <polygon points="14.49 8.67 15.06 8.67 15.06 1.08 14.49 1.08 14.49 8.67"></polygon>
-                    </g>
-                    <g class="building">
-                        <polyline points="18.76 0 25.01 3.21 25.01 21.13 18.76 21.13 18.76 0"></polyline>
-                    </g>
-                    <g class="building">
-                        <polygon points="25.58 21.13 29.27 21.13 29.27 11.38 25.58 11.38 25.58 21.13"></polygon>
-                        <polygon points="26.43 11.4 28.7 11.4 28.7 10.56 26.43 10.56 26.43 11.4"></polygon>
-                    </g>
-                </g>
-            </svg>
+            <div class="navbar-item">
+                <!-- <img src="/assets/img/npr-logo.jpg" alt="NPR Logo"> -->
+            </div>
+            <div class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <!-- <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
@@ -65,7 +47,7 @@
                                 <span class="icon">
                                     <i class="fa fa-download"></i>
                                 </span>
-                                <span>Get New Articles</span>
+                                <span id="scrape">Get New Articles</span>
                             </a>
                         </p>
                     </div>
@@ -88,7 +70,7 @@
                     News Scraper
                 </h1>
                 <h2 class="subtitle">
-                    Gothamist News
+                    NPR News
                 </h2>
             </div>
         </div>
@@ -97,7 +79,8 @@
     <section class="section">
         <div class="container">
             <h1 class="title">Article Results</h1>
-            <div id="scrape-results"></div>
+            <div id="articles"></div>
+            <div id="notes"></div>
         </div>
     </section>
 
@@ -110,7 +93,7 @@
     </footer>
 
 
-    <script src="/assets/js/index.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

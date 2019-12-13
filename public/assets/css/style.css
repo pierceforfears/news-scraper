@@ -1,11 +1,8 @@
-/* a#home,
+a#home,
 a.home,
 a#saved,
 a.saved {
   color: #3273dc;
-} */
-.gothamist-buildings {
-  color: #000000;
 }
 
 .dropdown {
@@ -14,6 +11,10 @@ a.saved {
 
 #hero-title {
   padding-bottom: 20px;
+}
+
+.hero-body {
+  background-color: #000000;
 }
 
 section.section {
